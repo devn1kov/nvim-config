@@ -3,6 +3,7 @@ return {
     "stevearc/conform.nvim",
     -- event = 'BufWritePre', -- uncomment for format on save
     opts = require "configs.conform",
+    lazy = false,
   },
 
   -- These are some examples, uncomment them if you want to see them work!
@@ -14,8 +15,8 @@ return {
   },
 
   {
-    'mrcjkb/rustaceanvim',
-    version = '^6', -- Recommended
+    "mrcjkb/rustaceanvim",
+    version = "^6", -- Recommended
     lazy = false, -- This plugin is already lazy
     ["rust-analyzer"] = {
       cargo = {

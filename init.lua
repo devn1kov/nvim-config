@@ -38,12 +38,12 @@ end)
 
 local user_home = vim.fs.normalize(vim.env.HOME)
 
-vim.diagnostic.config({ virtual_text = true })
+vim.diagnostic.config { virtual_text = true }
 
 vim.g.rustaceanvim = {
   server = {
     cmd = {
-      user_home .. "/.cargo/bin/rust-analyzer"
-    }
-  }
+      user_home .. "/.cargo/bin/rust-analyzer",
+    },
+  },
 }

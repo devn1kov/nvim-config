@@ -1,12 +1,14 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "ts_ls", "eslint" }
+local servers = { "html", "cssls", "ts_ls", "eslint", "glasgow" }
 vim.lsp.enable(servers)
 
 local base_on_attach = vim.lsp.config.eslint.on_attach
 vim.lsp.config("eslint", {
   on_attach = function(client, bufnr)
-    if not base_on_attach then return end
+    if not base_on_attach then
+      return
+    end
 
     base_on_attach(client, bufnr)
     vim.api.nvim_create_autocmd("BufWritePre", {
@@ -16,4 +18,4 @@ vim.lsp.config("eslint", {
   end,
 })
 
--- read :h vim.lsp.config for changing options of lsp servers 
+-- read :h vim.lsp.config for changing options of lsp servers
