@@ -6,7 +6,8 @@
 local M = {}
 
 M.base46 = {
-	theme = "ayu_dark",
+	theme = "horizon",
+  -- transparency = true,
 
 	-- hl_override = {
 	-- 	Comment = { italic = true },
@@ -20,5 +21,15 @@ M.base46 = {
 --          lazyload = false
 --      }
 -- }
+M.ui = {
+   statusline = {
+     theme = "default", 
+     separator_style = "default",
+     order = { "mode", "f", "git", "%=", "lsp_msg", "%=", "diagnostics", "lsp", "cwd", "cursor" },
+     modules = {
+       f = "%f"
+     }
+   },
+ }
 
 return M

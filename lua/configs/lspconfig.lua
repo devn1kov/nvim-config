@@ -1,6 +1,6 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "ts_ls", "eslint", "glasgow" }
+local servers = { "html", "cssls", "ts_ls", "eslint", "terraformls" }
 vim.lsp.enable(servers)
 
 local base_on_attach = vim.lsp.config.eslint.on_attach
